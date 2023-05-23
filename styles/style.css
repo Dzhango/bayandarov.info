@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format("truetype");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+
+/* SIMPLE RESET */
+
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Naming Convention TAC, https://jordanbrennan.hashnode.dev/tac-a-new-css-methodology */
+
+
+/* 
+    0. Variables
+    1. Global Styles
+    2. Tags
+    3. Attributes
+    4. Classes
+*/
+
+
+/* Variables */
+
+:root {
+    /* Font */
+    --fs-regular: 1rem;
+    --fs-medium: 1.25rem;
+    --fs-large: 2.67rem;
+    --fs-xlarge: 4.89rem;
+    /* line-height */
+    --lh-regular: 1.56;
+    --lh-medium: 1.33;
+    --lh-large: 1.167;
+    --lh-xlarge: 1;
+    /* letter-spacing */
+    --ls-large: -0.083rem;
+    --ls-xlarge: -0.139rem;
+    /* color */
+    --clr-primary-black: rgb(21, 21, 21);
+    --clr-primary-white: rgb(255, 255, 255);
+    --clr-highlight-green: rgb(78, 225, 160);
+    --clr-secondary-nero: rgb(21, 21, 21);
+    --clr-secondary-gray: rgb(217, 217, 217);
+    --font-family-default: "SpaceGrotesk";
+    --font-family-backup: "Times New Roman";
+}
+
+
+/* 1. Global Styles */
+
+html {
+    font-family: var(--font-family-default), var(--font-family-backup);
+}
+
+body {
+    background-color: var(--clr-primary-black);
+    color: var(--clr-primary-white);
+}
