@@ -46,6 +46,7 @@ svg {
     --fs-medium: 1.25rem;
     --fs-large: 2.67rem;
     --fs-xlarge: 4.89rem;
+    --fw-bold: 700;
     /* line-height */
     --lh-regular: 1.56;
     --lh-medium: 1.33;
@@ -74,4 +75,126 @@ html {
 body {
     background-color: var(--clr-primary-black);
     color: var(--clr-primary-white);
+    padding: 2rem;
+}
+
+
+/* 2. Tags */
+
+dev-logo {
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    /* add media query for 100% basis */
+    /* flex: 1 0 100%; */
+    /* text-align: center; */
+}
+
+dev-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+dev-icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+dev-intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+dev-greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: baseline;
+    text-align: center;
+    flex: 0 1 21rem;
+}
+
+dev-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 100%;
+}
+
+dev-profile picture {
+    /* flex: 1; */
+    max-width: 10.87rem;
+}
+
+h1 {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-xlarge);
+}
+
+
+/* 3. Attributes */
+
+
+/* 4. Classes */
+
+.flex-flow {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+
+/* .text-center {
+    text-align: center;
+} */
+
+
+/* 5. Media Queries */
+
+@media only screen and (min-width: 768px) {
+    dev-intro {
+        justify-content: space-between;
+        margin-top: 4.5rem;
+    }
+    dev-intro h1 {
+        font-size: var(--fs-xlarge);
+        line-height: var(--lh-xlarge);
+    }
+    dev-intro {
+        padding: inherit;
+    }
+    dev-intro picture {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        max-width: 17.89rem;
+    }
+    dev-greeting {
+        text-align: left;
+        flex: 0.25 0 60%;
+    }
+    .flex-flow {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    dev-intro picture {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        max-width: 27.81rem;
+    }
 }
