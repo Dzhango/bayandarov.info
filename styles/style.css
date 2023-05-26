@@ -25,6 +25,13 @@ svg {
     max-width: 100%;
 }
 
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
 
 /* Naming Convention TAC, https://jordanbrennan.hashnode.dev/tac-a-new-css-methodology */
 
@@ -75,11 +82,22 @@ html {
 body {
     background-color: var(--clr-primary-black);
     color: var(--clr-primary-white);
-    padding: 2rem;
+    padding: 1.5rem;
+    /* max-width: ; */
 }
 
 
 /* 2. Tags */
+
+header,
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
 
 dev-logo {
     font-size: var(--fs-medium);
@@ -107,28 +125,36 @@ dev-intro {
     flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2.5rem;
 }
 
 dev-greeting {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: flex-start;
-    align-items: baseline;
+    align-items: center;
     text-align: center;
     flex: 0 1 21rem;
+}
+
+dev-greeting a {
+    color: var(--clr-primary-white);
+    font-weight: var(--fw-bold);
+    padding: 0.5rem 0;
+    border-bottom: 0.1rem solid var(--clr-highlight-green);
 }
 
 dev-profile {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 0 100%;
+    flex: 0 0 10.87rem;
 }
 
 dev-profile picture {
     /* flex: 1; */
-    max-width: 10.87rem;
+    /* max-width: 10.87rem; */
 }
 
 h1 {
@@ -142,15 +168,6 @@ h1 {
 
 
 /* 4. Classes */
-
-.flex-flow {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    row-gap: 1.5rem;
-}
 
 
 /* .text-center {
@@ -181,15 +198,21 @@ h1 {
     }
     dev-greeting {
         text-align: left;
-        flex: 0.25 0 60%;
+        flex: 0 0 60%;
     }
-    .flex-flow {
+    header,
+    footer {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
 @media only screen and (min-width: 1440px) {
+    body {
+        max-width: 1110px;
+        padding: 0 20rem;
+        position: absolute;
+    }
     dev-intro picture {
         position: absolute;
         right: 0;
