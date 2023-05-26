@@ -1,0 +1,223 @@
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format("truetype");
+    font-display: swap;
+    font-weight: 100 900;
+}
+
+
+/* SIMPLE RESET */
+
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    font: inherit;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+
+/* Naming Convention TAC, https://jordanbrennan.hashnode.dev/tac-a-new-css-methodology */
+
+
+/* 
+    0. Variables
+    1. Global Styles
+    2. Tags
+    3. Attributes
+    4. Classes
+*/
+
+
+/* Variables */
+
+:root {
+    /* Font */
+    --fs-regular: 1rem;
+    --fs-medium: 1.25rem;
+    --fs-large: 2.67rem;
+    --fs-xlarge: 4.89rem;
+    --fw-bold: 700;
+    /* line-height */
+    --lh-regular: 1.56;
+    --lh-medium: 1.33;
+    --lh-large: 1.167;
+    --lh-xlarge: 1;
+    /* letter-spacing */
+    --ls-large: -0.083rem;
+    --ls-xlarge: -0.139rem;
+    /* color */
+    --clr-primary-black: rgb(21, 21, 21);
+    --clr-primary-white: rgb(255, 255, 255);
+    --clr-highlight-green: rgb(78, 225, 160);
+    --clr-secondary-nero: rgb(21, 21, 21);
+    --clr-secondary-gray: rgb(217, 217, 217);
+    --font-family-default: "SpaceGrotesk";
+    --font-family-backup: "Times New Roman";
+}
+
+
+/* 1. Global Styles */
+
+html {
+    font-family: var(--font-family-default), var(--font-family-backup);
+}
+
+body {
+    background-color: var(--clr-primary-black);
+    color: var(--clr-primary-white);
+    padding: 1.5rem;
+    /* max-width: ; */
+}
+
+
+/* 2. Tags */
+
+header,
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+
+dev-logo {
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    /* add media query for 100% basis */
+    /* flex: 1 0 100%; */
+    /* text-align: center; */
+}
+
+dev-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+dev-icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+dev-intro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+dev-greeting {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex: 0 1 21rem;
+}
+
+dev-greeting a {
+    color: var(--clr-primary-white);
+    font-weight: var(--fw-bold);
+    padding: 0.5rem 0;
+    border-bottom: 0.1rem solid var(--clr-highlight-green);
+}
+
+dev-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 10.87rem;
+}
+
+dev-profile picture {
+    /* flex: 1; */
+    /* max-width: 10.87rem; */
+}
+
+h1 {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-xlarge);
+}
+
+
+/* 3. Attributes */
+
+
+/* 4. Classes */
+
+
+/* .text-center {
+    text-align: center;
+} */
+
+
+/* 5. Media Queries */
+
+@media only screen and (min-width: 768px) {
+    dev-intro {
+        justify-content: space-between;
+        margin-top: 4.5rem;
+    }
+    dev-intro h1 {
+        font-size: var(--fs-xlarge);
+        line-height: var(--lh-xlarge);
+    }
+    dev-intro {
+        padding: inherit;
+    }
+    dev-intro picture {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        max-width: 17.89rem;
+    }
+    dev-greeting {
+        text-align: left;
+        flex: 0 0 60%;
+    }
+    header,
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        max-width: 1110px;
+        padding: 0 20rem;
+        position: absolute;
+    }
+    dev-intro picture {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        max-width: 27.81rem;
+    }
+}
