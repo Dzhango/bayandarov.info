@@ -25,43 +25,43 @@
     <main>
         <dev-intro>
             <dev-greeting>
-                <h1>Nice to meet you! I'm Adam Keyes.</h1>
+                <h1>Nice to meet you! I'm <span>Adam Keyes.</span></h1>
                 <p>Based in the UK, I’m a front-end developer passionate about building accessible web apps that users love.</p>
-                <a href="#">CONTACT ME</a>
+                <a href="#" class="action-item">CONTACT ME</a>
             </dev-greeting>
             <dev-profile>
                 <picture>
-                    <source media="(min-width:768px)" srcset="./assets/images/image-profile-tablet.webp">
+                    <!-- <source media="(min-width:1440px)" srcset="./assets/images/image-profile-desktop.webp"> -->
                     <source media="(min-width:1440px)" srcset="./assets/images/image-profile-desktop.webp">
+                    <source media="(min-width:768px)" srcset="./assets/images/image-profile-tablet.webp">
                     <img src="./assets/images/image-profile-mobile.webp" alt="personal profile picture">
                 </picture>
             </dev-profile>
-
         </dev-intro>
         <dev-skills>
             <ul>
                 <li>
-                    <p>HTML</p>
+                    <p class="highlight">HTML</p>
                     <p>4 years experience</p>
                 </li>
                 <li>
-                    <p>CSS</p>
+                    <p class="highlight">CSS</p>
                     <p>4 years experience</p>
                 </li>
                 <li>
-                    <p>JavaScript</p>
+                    <p class="highlight">JavaScript</p>
                     <p>3 years experience</p>
                 </li>
                 <li>
-                    <p>Accessability</p>
+                    <p class="highlight">Accessability</p>
                     <p>3 years experience</p>
                 </li>
                 <li>
-                    <p>React</p>
+                    <p class="highlight">React</p>
                     <p>2 years experience</p>
                 </li>
                 <li>
-                    <p>Sass</p>
+                    <p class="highlight">Sass</p>
                     <p>1 years experience</p>
                 </li>
             </ul>
@@ -69,7 +69,7 @@
         <dev-portfolio>
             <div>
                 <h2>Projects</h2>
-                <a href="#">Contact Me</a>
+                <a href="#">CONTACT ME</a>
             </div>
             <dev-projects>
                 <dev-project>
@@ -77,52 +77,75 @@
                         <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-1-large.webp">
                         <img src="./assets/images/thumbnail-project-1-small.webp" alt="project 1 thumbnail">
                     </picture>
-                    <p>Design Portfolio</p>
-                    <p>HTML, CSS</p>
+                    <dev-project-name>
+                        DESIGN PORTFOLIO
+                    </dev-project-name>
+                    <dev-project-tools>HTML CSS</dev-project-tools>
+                    <dev-project-links>
+                        <a href="#">VIEW PROJECT</a>
+                        <a href="#">VIEW CODE</a>
+                    </dev-project-links>
                 </dev-project>
                 <dev-project>
                     <picture>
                         <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-2-large.webp">
                         <img src="./assets/images/thumbnail-project-2-small.webp" alt="project 2 thumbnail">
                     </picture>
-                    <p>E-Learning Landing Page</p>
-                    <p>HTML, CSS</p>
+                    <dev-project-name>E-Learning Landing Page</dev-project-name>
+                    <dev-project-tools>HTML, CSS</dev-project-tools>
+                    <dev-project-links>
+                        <a href="#">VIEW PROJECT</a>
+                        <a href="#">VIEW CODE</a>
+                    </dev-project-links>
                 </dev-project>
                 <dev-project>
                     <picture>
                         <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-3-large.webp">
                         <img src="./assets/images/thumbnail-project-3-small.webp" alt="project 3 thumbnail">
                     </picture>
-                    <p>Todo Web App</p>
-                    <p>HTML, CSS</p>
+                    <dev-project-name>TODO WEB APP</dev-project-name>
+                    <dev-project-tools>HTML, CSS</dev-project-tools>
+                    <dev-project-links>
+                        <a href="#">VIEW PROJECT</a>
+                        <a href="#">VIEW CODE</a>
+                    </dev-project-links>
                 </dev-project>
-                </dev-column>
-                <dev-column>
-                    <dev-project>
-                        <picture>
-                            <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-4-large.webp">
-                            <img src="./assets/images/thumbnail-project-4-small.webp" alt="project 4 thumbnail">
-                        </picture>
-                        <p>Entertainment Web App</p>
-                        <p>HTML, CSS</p>
-                    </dev-project>
-                    <dev-project>
-                        <picture>
-                            <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-5-large.webp">
-                            <img src="./assets/images/thumbnail-project-5-small.webp" alt="project 5 thumbnail">
-                        </picture>
-                        <p>Memory Game</p>
-                        <p>HTML, CSS, JavaScript</p>
-                    </dev-project>
-                    <dev-project>
-                        <picture>
-                            <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-6-large.webp">
-                            <img src="./assets/images/thumbnail-project-6-small.webp" alt="project 6 thumbnail">
-                        </picture>
-                        <p>Art Gallery Arcade</p>
-                        <p>HTML, CSS, JavaScript</p>
-                    </dev-project>
-                </dev-column>
+                <dev-project>
+                    <picture>
+                        <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-4-large.webp">
+                        <img src="./assets/images/thumbnail-project-4-small.webp" alt="project 4 thumbnail">
+                    </picture>
+                    <dev-project-name>ENTERTAINMENT WEB APP</dev-project-name>
+                    <dev-project-tools>HTML, CSS</dev-project-tools>
+                    <dev-project-links>
+                        <a href="#">VIEW PROJECT</a>
+                        <a href="#">VIEW CODE</a>
+                    </dev-project-links>
+                </dev-project>
+                <dev-project>
+                    <picture>
+                        <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-5-large.webp">
+                        <img src="./assets/images/thumbnail-project-5-small.webp" alt="project 5 thumbnail">
+                    </picture>
+                    <dev-project-name>MEMORY GAME</dev-project-name>
+                    <dev-project-tools>HTML, CSS</dev-project-tools>
+                    <dev-project-links>
+                        <a href="#">VIEW PROJECT</a>
+                        <a href="#">VIEW CODE</a>
+                    </dev-project-links>
+                </dev-project>
+                <dev-project>
+                    <picture>
+                        <source media="(min-width:1440px)" srcset="./assets/images/thumbnail-project-6-large.webp">
+                        <img src="./assets/images/thumbnail-project-6-small.webp" alt="project 6 thumbnail">
+                    </picture>
+                    <dev-project-name>ART GALLERY SHOWCASE</dev-project-name>
+                    <dev-project-tools>HTML, CSS</dev-project-tools>
+                    <dev-project-links>
+                        <a href="#">VIEW PROJECT</a>
+                        <a href="#">VIEW CODE</a>
+                    </dev-project-links>
+                </dev-project>
             </dev-projects>
             <dev-contact>
                 <div>
