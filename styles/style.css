@@ -180,6 +180,7 @@ a,
 }
 
 main {
+    position: relative;
     max-width: 68.75rem;
 }
 
@@ -398,6 +399,19 @@ dev-contact h3 {
     padding-right: 1.5rem;
 }
 
+.background-rings {
+    position: absolute;
+    top: 3rem;
+    left: -17rem;
+    z-index: -2;
+}
+
+.background-circle {
+    position: absolute;
+    top: 10rem;
+    right: -5rem;
+}
+
 
 /* 5. Media Queries */
 
@@ -436,6 +450,9 @@ dev-contact h3 {
     dev-skills li {
         text-align: left;
     }
+    .background-circle {
+        top: 20rem;
+    }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -470,5 +487,8 @@ dev-contact h3 {
     dev-contact {
         text-align: left;
         justify-content: space-between;
+    }
+    .background-circle {
+        right: 25rem;
     }
 }
