@@ -225,7 +225,8 @@ dev-greeting {
 }
 
 dev-greeting h1 span {
-    border-bottom: 0.3rem solid var(--clr-highlight-green);
+    /* border-bottom: 0.3rem solid var(--clr-highlight-green); */
+    color: var(--clr-highlight-green);
 }
 
 dev-greeting p {
@@ -243,12 +244,13 @@ dev-greeting a:hover {
     color: var(--clr-highlight-green);
 }
 
-dev-profile {
+
+/* dev-profile {
     position: relative;
     top: -5rem;
     max-width: 10.87rem;
     z-index: -1;
-}
+} */
 
 dev-skills {
     display: block;
@@ -412,6 +414,10 @@ dev-contact h3 {
     right: -5rem;
 }
 
+.margin-left {
+    margin: 2rem;
+}
+
 
 /* 5. Media Queries */
 
@@ -446,6 +452,7 @@ dev-contact h3 {
     dev-signature {
         flex-direction: row;
         justify-content: space-between;
+        gap: 5rem;
     }
     dev-skills li {
         text-align: left;
